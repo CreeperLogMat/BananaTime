@@ -13,9 +13,26 @@ namespace BananaTime.BananaTime.Pages
         public override string Title => PageTitle;
         private readonly Color notificationColor = Color.blue;
         private readonly Color textColor = Color.white;
-        public static bool IsModdedRoom;
         bool Raining;
+        public static bool IsModdedRoom => NetworkSystem.Instance.InRoom && NetworkSystem.Instance.GameModeString.Contains("MODDED");
+        void Start()
+        {
+            NetworkSystem.Instance.OnJoinedRoomEvent += OnJoinedRoom;
+            NetworkSystem.Instance.OnReturnedToSinglePlayer += OnLeaveRoom;
+        }
 
+        void OnLeaveRoom()
+        {
+            BetterDayNightManager.instance.currentSetting = TimeSettings.Normal;
+        }
+
+        void OnJoinedRoom()
+        {
+            if (!IsModdedRoom)
+            {
+                BetterDayNightManager.instance.currentSetting = TimeSettings.Normal;
+            }
+        }
         public override void OnPostModSetup()
         {
             selectionHandler.maxIndex = 4;
@@ -26,10 +43,13 @@ namespace BananaTime.BananaTime.Pages
             var content = new StringBuilder();
 
             content.AppendLine($"<color=yellow>==</color> {PageTitle} <color=yellow>==</color>");
+            content.AppendLine($"By <color=#9825F8>defaultuser0</color> and <color=#228B22>Cody</color>");
+            content.AppendLine($"    ");
             content.AppendLine(selectionHandler.GetOriginalBananaOSSelectionText(0, "Morning"));
             content.AppendLine(selectionHandler.GetOriginalBananaOSSelectionText(1, "Day"));
             content.AppendLine(selectionHandler.GetOriginalBananaOSSelectionText(2, "Evening"));
             content.AppendLine(selectionHandler.GetOriginalBananaOSSelectionText(3, "Night"));
+            content.AppendLine($"    ");
             content.AppendLine(selectionHandler.GetOriginalBananaOSSelectionText(4, "Toggle Rain"));
 
             return content.ToString();
@@ -76,7 +96,6 @@ namespace BananaTime.BananaTime.Pages
                     {
                         SendErrorNoti("<align=center><size=5> NOT IN MODDED ROOM!");
                     }
-
                     break;
                 case 2:
                     if (IsModdedRoom)
@@ -88,7 +107,6 @@ namespace BananaTime.BananaTime.Pages
                     {
                         SendErrorNoti("<align=center><size=5> NOT IN MODDED ROOM!");
                     }
-
                     break;
                 case 3:
                     if (IsModdedRoom)
@@ -100,7 +118,6 @@ namespace BananaTime.BananaTime.Pages
                     {
                         SendErrorNoti("<align=center><size=5> NOT IN MODDED ROOM!");
                     }
-
                     break;
                 case 4:
                     if (IsModdedRoom)
@@ -113,18 +130,7 @@ namespace BananaTime.BananaTime.Pages
                     {
                         SendErrorNoti("<align=center><size=5> NOT IN MODDED ROOM!");
                     }
-
                     break;
-            }
-        }
-
-        void Update()
-        {
-            IsModdedRoom = PhotonNetwork.InRoom && PhotonNetwork.CurrentRoom.CustomProperties["gameMode"].ToString().Contains("MODDED");
-
-            if (!IsModdedRoom)
-            {
-                BetterDayNightManager.instance.currentSetting = TimeSettings.Normal;
             }
         }
 
