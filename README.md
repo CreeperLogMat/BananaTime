@@ -2,6 +2,9 @@
 <a href="https://github.com/defaultuser0-nerd/BananaTime/releases"><img src="https://img.shields.io/github/downloads/defaultuser0-nerd/BananaTime/total.svg?style=for-the-badge"></a>
 
 Changes the day of time
+
+**You must be in a modded**
+
 ![2025-01-0921-14-50-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/d07685ae-b094-40a1-881b-622134404433)
 
 ### **Requirements**
