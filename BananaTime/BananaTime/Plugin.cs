@@ -1,30 +1,11 @@
-﻿using System;
-using System.ComponentModel;
-using BananaTime.BananaTime.Pages;
+﻿using BananaTime.BananaTime.Pages;
 using BepInEx;
-using GorillaTag.CosmeticSystem;
-
+using Photon.Pun;
 namespace BananaTime.BananaTime
 {
     [BepInPlugin(Constants.GUID, Constants.Name, Constants.Version)]
     public class Plugin : BaseUnityPlugin
     {
-        public static bool IsModdedRoom;
-
-        void Update()
-        {
-            if (!IsModdedRoom)
-            {
-                BetterDayNightManager.instance.currentSetting = TimeSettings.Normal;
-                SwitchToPage(typeof(Page));
-            }
-        }
-
-        private void SwitchToPage(Type type)
-        {
-            throw new NotImplementedException();
-        }
-
         public static void TimeOfDay(int time)
         {
             BetterDayNightManager.instance.SetTimeOfDay(time);

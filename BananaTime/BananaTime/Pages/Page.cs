@@ -1,5 +1,6 @@
 ﻿using BananaOS;
 using BananaOS.Pages;
+using Photon.Pun;
 using System.Text;
 using UnityEngine;
 
@@ -7,15 +8,13 @@ namespace BananaTime.BananaTime.Pages
 {
     public class Page : WatchPage
     {
+        public override bool DisplayOnMainMenu => true;
         private const string PageTitle = "<color=yellow>Banana</color><color=yellow>Time</color>";
-
+        public override string Title => PageTitle;
         private readonly Color notificationColor = Color.blue;
         private readonly Color textColor = Color.white;
-
-        public override bool DisplayOnMainMenu => true;
+        public static bool IsModdedRoom;
         bool Raining;
-
-        public override string Title => PageTitle;
 
         public override void OnPostModSetup()
         {
@@ -53,37 +52,90 @@ namespace BananaTime.BananaTime.Pages
 
         private void HandleEnterButtonPress()
         {
-            if (!Plugin.IsModdedRoom) return;
-
             switch (selectionHandler.currentIndex)
             {
                 case 0:
-                    SendNotification("<align=center><size=5>  Time Set To Morning!");
-                    Plugin.TimeOfDay(1);
+                    if (IsModdedRoom)
+                    {
+                        Plugin.TimeOfDay(1);
+                        SendNotification("<align=center><size=5>  Time Set To Morning!");
+                    } 
+                    else
+                    {
+                        SendErrorNoti("<align=center><size=5> NOT IN MODDED ROOM!");
+                    }
+ 
                     break;
                 case 1:
-                    SendNotification("<align=center><size=5>  Time Set To Day!");
-                    Plugin.TimeOfDay(3);
+                    if (IsModdedRoom)
+                    {
+                        Plugin.TimeOfDay(3);
+                        SendNotification("<align=center><size=5>  Time Set To Day!");
+                    }
+                    else
+                    {
+                        SendErrorNoti("<align=center><size=5> NOT IN MODDED ROOM!");
+                    }
+
                     break;
                 case 2:
-                    SendNotification("<align=center><size=5>  Time Set To Evening!");
-                    Plugin.TimeOfDay(7);
+                    if (IsModdedRoom)
+                    {
+                        Plugin.TimeOfDay(7);
+                        SendNotification("<align=center><size=5>  Time Set To Evening!");
+                    }
+                    else
+                    {
+                        SendErrorNoti("<align=center><size=5> NOT IN MODDED ROOM!");
+                    }
+
                     break;
                 case 3:
-                    SendNotification("<align=center><size=5>  Time Set To Night!");
-                    Plugin.TimeOfDay(0);
+                    if (IsModdedRoom)
+                    {
+                        Plugin.TimeOfDay(0);
+                        SendNotification("<align=center><size=5>  Time Set To Night!");
+                    }
+                    else
+                    {
+                        SendErrorNoti("<align=center><size=5> NOT IN MODDED ROOM!");
+                    }
+
                     break;
                 case 4:
-                    SendNotification("<align=center><size=5> Rain Has Been Toggled");
-                    Raining = !Raining;
-                    Plugin.RainToggle(Raining);
+                    if (IsModdedRoom)
+                    {
+                        SendNotification("<align=center><size=5> Rain Has Been Toggled");
+                        Raining = !Raining;
+                        Plugin.RainToggle(Raining);                        
+                    }
+                    else
+                    {
+                        SendErrorNoti("<align=center><size=5> NOT IN MODDED ROOM!");
+                    }
+
                     break;
+            }
+        }
+
+        void Update()
+        {
+            IsModdedRoom = PhotonNetwork.InRoom && PhotonNetwork.CurrentRoom.CustomProperties["gameMode"].ToString().Contains("MODDED");
+
+            if (!IsModdedRoom)
+            {
+                BetterDayNightManager.instance.currentSetting = TimeSettings.Normal;
             }
         }
 
         private void SendNotification(string message)
         {
             BananaNotifications.DisplayNotification(message, notificationColor, textColor, 0.8f);
+        }
+        
+        private void SendErrorNoti(string message)
+        {
+            BananaNotifications.DisplayNotification(message, Color.red, Color.white, 0.8f);
         }
     }
 }

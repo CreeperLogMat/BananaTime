@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "E:\\shit\\BananaTime\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2F9B83DD-8132-4154-BCDF-80CB09D8E50D}|BananaTime\\BananaTime.csproj|e:\\shit\\bananatime\\bananatime\\bananatime\\page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F9B83DD-8132-4154-BCDF-80CB09D8E50D}|BananaTime\\BananaTime.csproj|solutionrelative:bananatime\\bananatime\\page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2F9B83DD-8132-4154-BCDF-80CB09D8E50D}|BananaTime\\BananaTime.csproj|e:\\shit\\bananatime\\bananatime\\bananatime\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F9B83DD-8132-4154-BCDF-80CB09D8E50D}|BananaTime\\BananaTime.csproj|solutionrelative:bananatime\\bananatime\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F9B83DD-8132-4154-BCDF-80CB09D8E50D}|BananaTime\\BananaTime.csproj|e:\\shit\\bananatime\\bananatime\\bananatime\\pages\\page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F9B83DD-8132-4154-BCDF-80CB09D8E50D}|BananaTime\\BananaTime.csproj|solutionrelative:bananatime\\bananatime\\pages\\page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2F9B83DD-8132-4154-BCDF-80CB09D8E50D}|BananaTime\\BananaTime.csproj|e:\\shit\\bananatime\\bananatime\\bananatime\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F9B83DD-8132-4154-BCDF-80CB09D8E50D}|BananaTime\\BananaTime.csproj|solutionrelative:bananatime\\bananatime\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F9B83DD-8132-4154-BCDF-80CB09D8E50D}|BananaTime\\BananaTime.csproj|e:\\shit\\bananatime\\bananatime\\bananatime\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F9B83DD-8132-4154-BCDF-80CB09D8E50D}|BananaTime\\BananaTime.csproj|solutionrelative:bananatime\\bananatime\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,20 +46,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Page.cs",
-              "DocumentMoniker": "E:\\shit\\BananaTime\\BananaTime\\BananaTime\\Page.cs",
-              "RelativeDocumentMoniker": "BananaTime\\BananaTime\\Page.cs",
-              "ToolTip": "E:\\shit\\BananaTime\\BananaTime\\BananaTime\\Page.cs",
-              "RelativeToolTip": "BananaTime\\BananaTime\\Page.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "E:\\shit\\BananaTime\\BananaTime\\BananaTime\\Pages\\Page.cs",
+              "RelativeDocumentMoniker": "BananaTime\\BananaTime\\Pages\\Page.cs",
+              "ToolTip": "E:\\shit\\BananaTime\\BananaTime\\BananaTime\\Pages\\Page.cs",
+              "RelativeToolTip": "BananaTime\\BananaTime\\Pages\\Page.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAuwIYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-10T22:16:57.223Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Constants.cs",
               "DocumentMoniker": "E:\\shit\\BananaTime\\BananaTime\\BananaTime\\Constants.cs",
               "RelativeDocumentMoniker": "BananaTime\\BananaTime\\Constants.cs",
@@ -72,13 +72,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Plugin.cs",
               "DocumentMoniker": "E:\\shit\\BananaTime\\BananaTime\\BananaTime\\Plugin.cs",
               "RelativeDocumentMoniker": "BananaTime\\BananaTime\\Plugin.cs",
               "ToolTip": "E:\\shit\\BananaTime\\BananaTime\\BananaTime\\Plugin.cs*",
               "RelativeToolTip": "BananaTime\\BananaTime\\Plugin.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-10T22:16:49.209Z",
               "EditorCaption": ""
