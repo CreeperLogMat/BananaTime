@@ -5,8 +5,11 @@ Changes the day of time
 
 **You must be in a modded**
 
-![2025-01-0921-14-50-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/d07685ae-b094-40a1-881b-622134404433)
+![2025-01-1112-48-32-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/7a87a972-4ef3-444d-8b95-28c135f14742)
 
+### **Contributors**
+ - [Cody](https://github.com/developer-cody) - Full rewrite and made the code better overall
+ - [DecalFree](https://github.com/decalfree) - Modded Checks
 ### **Requirements**
  - [BepInEx](<https://github.com/BepInEx/BepInEx/releases/latest>)
  - [BananaOS](https://github.com/HuskyGT/Banana-OS)
