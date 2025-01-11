@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.11.35327.3
+VisualStudioVersion = 17.12.35506.116 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BananaTime", "BananaTime.csproj", "{A2841C70-5853-4637-BFF4-5EFF60993B8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BananaTime", "BananaTime\BananaTime.csproj", "{2F9B83DD-8132-4154-BCDF-80CB09D8E50D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A2841C70-5853-4637-BFF4-5EFF60993B8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A2841C70-5853-4637-BFF4-5EFF60993B8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A2841C70-5853-4637-BFF4-5EFF60993B8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A2841C70-5853-4637-BFF4-5EFF60993B8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F9B83DD-8132-4154-BCDF-80CB09D8E50D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F9B83DD-8132-4154-BCDF-80CB09D8E50D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F9B83DD-8132-4154-BCDF-80CB09D8E50D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F9B83DD-8132-4154-BCDF-80CB09D8E50D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {27B82CC5-91BD-4B14-B636-121CD3C28DF3}
 	EndGlobalSection
 EndGlobal
