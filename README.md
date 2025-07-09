@@ -1,4 +1,7 @@
 # BananaTime
+
+Forked to make it work anywhere. AND ITS FUCKING CLIENT SIDED SO IT WONT DO SHIT TO OTHERS
+
 <a href="https://github.com/defaultuser0-nerd/BananaTime/releases"><img src="https://img.shields.io/github/downloads/defaultuser0-nerd/BananaTime/total.svg?style=for-the-badge"></a>
 
 Changes the day of time
