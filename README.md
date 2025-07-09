@@ -1,12 +1,7 @@
 # BananaTime
-
-Forked to make it work anywhere. AND ITS FUCKING CLIENT SIDED SO IT WONT DO SHIT TO OTHERS
-
 <a href="https://github.com/defaultuser0-nerd/BananaTime/releases"><img src="https://img.shields.io/github/downloads/defaultuser0-nerd/BananaTime/total.svg?style=for-the-badge"></a>
 
-Changes the day of time
-
-**You must be in a modded**
+Changes the time for your client
 
 ![2025-01-1112-48-32-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/7a87a972-4ef3-444d-8b95-28c135f14742)
 
